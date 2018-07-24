@@ -13,7 +13,7 @@ namespace XORNetwork
     {
         static void Main(string[] args)
         {
-            int[] nodesPerLayer = new int[] { 2, 3, 1 };
+            int[] nodesPerLayer = new int[] { 2, 2, 1 };
 
             float[][] inputs = new float[][] { new float[] { 0, 0},
             new float[] { 1, 0},
