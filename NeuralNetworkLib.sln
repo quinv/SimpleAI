@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNetwork", "TestNetwork\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XORNetwork", "XORNetwork\XORNetwork.csproj", "{2BF9A6E4-2904-4AA2-9CF5-80B310EDE74C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarioKartPositionChecker", "MarioKartPositionChecker\MarioKartPositionChecker.csproj", "{6DC3436F-51E4-41C3-91EE-FB043E7F0BCA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MarioKartPositionReco", "MarioKartPositionReco", "{462E4CE8-F4BF-434F-925E-BD4C21B65541}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnMarioKartPositions", "LearnMarioKartPositions\LearnMarioKartPositions.csproj", "{A7940EB2-B971-44D6-8BCE-DF9900CBA0B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +39,21 @@ Global
 		{2BF9A6E4-2904-4AA2-9CF5-80B310EDE74C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BF9A6E4-2904-4AA2-9CF5-80B310EDE74C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BF9A6E4-2904-4AA2-9CF5-80B310EDE74C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DC3436F-51E4-41C3-91EE-FB043E7F0BCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC3436F-51E4-41C3-91EE-FB043E7F0BCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC3436F-51E4-41C3-91EE-FB043E7F0BCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC3436F-51E4-41C3-91EE-FB043E7F0BCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7940EB2-B971-44D6-8BCE-DF9900CBA0B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7940EB2-B971-44D6-8BCE-DF9900CBA0B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7940EB2-B971-44D6-8BCE-DF9900CBA0B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7940EB2-B971-44D6-8BCE-DF9900CBA0B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6DC3436F-51E4-41C3-91EE-FB043E7F0BCA} = {462E4CE8-F4BF-434F-925E-BD4C21B65541}
+		{A7940EB2-B971-44D6-8BCE-DF9900CBA0B1} = {462E4CE8-F4BF-434F-925E-BD4C21B65541}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0AD27271-DA29-4F32-8EB0-9F92EB3FFAA1}

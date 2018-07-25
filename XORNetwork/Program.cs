@@ -11,9 +11,11 @@ namespace XORNetwork
 {
     class Program
     {
+        private const string WEIGHTS_FILE = "XORWeights.weight";
+
         static void Main(string[] args)
         {
-            int[] nodesPerLayer = new int[] { 2, 2, 1 };
+            int[] nodesPerLayer = new int[] { 2, 3, 1 };
 
             float[][] inputs = new float[][] { new float[] { 0, 0},
             new float[] { 1, 0},
@@ -27,11 +29,25 @@ namespace XORNetwork
             Random r = new Random();
 
             int numNetworks = 100;
-            int generations = 100000;
             Network[] networks = new Network[numNetworks];
+
+            bool fromFile = false;
+            Console.Write("Load from file ? (y/n) ");
+            if(Console.ReadKey().Key == ConsoleKey.Y)
+            {
+                fromFile = true;
+            }
+
             for (int i = 0; i < networks.Length; i++)
             {
-                networks[i] = new Network(networkStructure, nodesPerLayer);
+                if (fromFile)
+                {
+                    networks[i] = new Network(networkStructure, WEIGHTS_FILE);
+                }
+                else
+                {
+                    networks[i] = new Network(networkStructure, nodesPerLayer);
+                }
             }
             MutateNetworks mutateNetworks = new MutateNetworks(0.05f, 10, 2, nodesPerLayer);
 
@@ -76,7 +92,16 @@ namespace XORNetwork
 
             //Network bestNetwork = SortNetworks.GetBestNetwork(networks);
             //Console.WriteLine(bestNetwork.EvaluateNetwork(new float[] { 1, 0 })[0]);
+            
+            Console.Write("Save Weights? (y/n)");
+            if(Console.ReadKey().Key == ConsoleKey.Y)
+            {
+                Network bestNetwork = SortNetworks.GetBestNetwork(networks);
+                bestNetwork.SaveNetwork(WEIGHTS_FILE);
+            }
 
+            Console.WriteLine();
+            Console.WriteLine("Press any key to exit");
             Console.ReadKey();
         }
     }

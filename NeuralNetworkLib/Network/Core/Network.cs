@@ -32,6 +32,19 @@ namespace NeuralNetworkLib.Network.Core
             networkEvaluator = new NetworkEvaluator(this.networkStructure, this.weights);
         }
 
+        public Network(NetworkStructure networkStructure, string weightsFile)
+        {
+            this.networkStructure = networkStructure;
+            weights = new Weights();
+            weights.LoadWeights(weightsFile);
+            networkEvaluator = new NetworkEvaluator(this.networkStructure, weights);
+        }
+
+        public void SaveNetwork(string weightsFile)
+        {
+            weights.SaveWeights(weightsFile);
+        }
+
         public void ResetFitness()
         {
             Fitness = 0;

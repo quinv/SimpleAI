@@ -77,6 +77,10 @@ namespace NeuralNetworkLib.Network.Core
                     {
                         weightValues[i] *= -1;
                     }
+                    if(r.NextDouble() < 0.01f)
+                    {
+                        weightValues[i] += r.Next(2) == 0 ? 1 : -1;
+                    }
                 }
             }
             return weightValues;
